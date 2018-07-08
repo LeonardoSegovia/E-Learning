@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Model.Auth.ApplicationUser">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAABAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Auth\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Domain.Category">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAA=</HashCode>
+      <FileName>Domain\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Domain.Course">
+    <Position X="5.25" Y="0.5" Width="2.75" />
+    <AssociationLine Name="Category" Type="Model.Domain.Category" FixedFromPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.184" />
+        <Point X="3.25" Y="2.184" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAQAgIAAAgAAAAAQAAAAAABAAABAAAAQBCAA=</HashCode>
+      <FileName>Domain\Course.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+      <Property Name="Author" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Leassons" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Model.Domain.CourseLeassonLearnedsPerUser">
+    <Position X="3.25" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAABAAIAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\CourseLeassonLearnedsPerUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Leasson" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Model.Domain.Income">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAAAAAgQAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Income.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Domain.LeassonsPerCourse">
+    <Position X="0.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAHAAAAAgAAAAAAAIAAAAwAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Domain\LeassonsPerCourse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Model.Domain.ReviewsPerCouse">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAHAAAAAAAAAAAAAIAAAAgAAAAAAAAAAAAIAAABAAA=</HashCode>
+      <FileName>Domain\ReviewsPerCourse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Course" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Model.Domain.UsersPerCouse">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <AssociationLine Name="Course" Type="Model.Domain.Course" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.188" Y="6.25" />
+        <Point X="10.188" Y="2.013" />
+        <Point X="8" Y="2.013" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAHAAAAAAAAAAIAAIAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\UsersPerCourse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Course" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
